@@ -12,7 +12,7 @@
   </div>
   <div id="about">
     <h2>Code + content + community. </h2>
-    <p>Hi, I'm Cecelia Martinez 👋 Community Lead at <a href="https://replay.io">Replay.io</a>, Chapter Head of <a href="https://www.outintech.com">Out in Tech</a> Atlanta, a volunteer with <a href="https://www.womenwhocode.com/frontend" >Women Who Code Front End</a>, and a <a href="https://stars.github.com/">GitHub Star</a>.</p>
+    <p>Hi, I'm Cecelia Martinez 👋 Chapter Head of <a href="https://www.outintech.com">Out in Tech</a> Atlanta, a volunteer with <a href="https://www.womenwhocode.com/frontend" >Women Who Code Front End</a>, and a <a href="https://stars.github.com/">GitHub Star</a>.</p>
     <ul>
       <li> ➡️ Streaming Tuesdays 7:30-9 ET on <a href="https://www.twitch.tv/ceceliacreates">Twitch</a>, coding and answering questions about careers in tech.</li>
       <li> ➡️ Offering free mentoring sessions for underrepresented people getting into tech, follow on <a href="https://twitter.com/ceceliacreates">Twitter</a> for updates.</li>

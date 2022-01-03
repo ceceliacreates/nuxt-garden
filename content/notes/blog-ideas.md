@@ -59,7 +59,6 @@ description: an ongoing list of ideas for blog posts
 - Approach debugging
 - Use GitHub issues to manage a software project
 - Use GitHub issues to track bugs and feature requests
-- Create a template in Vue
 - Call a function onCreated with Vue 3
 - Add TypeScript to Ionic Vue
 - Debug web apps in the browser
@@ -76,7 +75,5 @@ description: an ongoing list of ideas for blog posts
 - Create a strike-through animation with CSS
 - Create a text-change animation with CSS
 - Apply global style with Layouts in Nuxt
-- Creating a dark mode toggle with Layouts in Nuxt
 - SSG, SSR, SPA
 - Considerations for SSG apps
-
