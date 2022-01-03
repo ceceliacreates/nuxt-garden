@@ -1,5 +1,5 @@
 ---
-title: Making the Most of a Mentoring Session as a Mentee
+title: Making the Most of Your Session with a Mentor
 publishedOn: 2021-12-30T13:10:00
 updatedOn: 2021-12-30T13:10:00
 tags: [career, mentoring, jobs]
