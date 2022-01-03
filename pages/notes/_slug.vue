@@ -1,9 +1,11 @@
 <template>
     <main>
+      <div class="header">
          <p><nuxt-link to="/notes"> ⬅️ Back to notes </nuxt-link></p>
         <h1> {{note.title}} </h1>
         <p class="date" v-if="note.updatedOn > note.publishedOn">Last updated: {{new Date(note.updatedOn).toDateString() }}</p>
         <p class="date"> First created: {{new Date(note.publishedOn).toDateString() }}</p>
+      </div>
         <nuxt-content :document="note" />
         </main>
 </template>
@@ -20,7 +22,7 @@ export default {
 }
 </script>
 <style>
-main {
+.header {
   display: flex;
   flex-direction: column;
   justify-content: center;

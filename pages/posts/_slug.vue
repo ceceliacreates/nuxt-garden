@@ -1,10 +1,12 @@
 <template>
     <main>
+      <div class="header">
          <p><nuxt-link to="/posts"> ⬅️ Back to posts </nuxt-link></p>
         <h1> {{post.title}} </h1>
         <p class="date" v-if="post.updatedOn > post.publishedOn">Last updated: {{new Date(post.updatedOn).toDateString() }}</p>
         <p class="date"> First published: {{new Date(post.publishedOn).toDateString() }}</p>
         <nuxt-content :document="post" />
+      </div>
         </main>
 </template>
 
@@ -20,7 +22,7 @@ export default {
 }
 </script>
 <style>
-main {
+.header {
   display: flex;
   flex-direction: column;
   justify-content: center;
