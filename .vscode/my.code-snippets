@@ -22,8 +22,9 @@
 		  "---",
 		  "title: \"$1\"",
 		  "publishedOn: $2",
-		  "tags: [$3]",
-		  "description: \"${4:note}\"",
+		  "updatedOn: $3",
+		  "tags: [$4]",
+		  "description: \"${5:note}\"",
 		  "---",
 		  ""
 		],
@@ -36,15 +37,16 @@
 		  "---",
 		  "title: 'Things I Learned Week Ending $1'",
 		  "publishedOn: $2",
-		  "tags: ['til', 'collection', $3]",
-		  "description: \"${4:links of the week}\"",
+		  "updatedOn: $3",
+		  "tags: ['til', 'collection', $4]",
+		  "description: \"${5:links of the week}\"",
 		  "---",
 		  ""
 		],
 		"description": "til frontmatter"
 	},
-	"article frontmatter": {
-		"prefix": "articleFrontmatter",
+	"post frontmatter": {
+		"prefix": "postFrontmatter",
 		"body": [
 		  "---",
 		  "title: \"$1\"",
@@ -56,7 +58,7 @@
 		  "---",
 		  ""
 		],
-		"description": "article frontmatter"
+		"description": "post frontmatter"
 	  },
 	  "Event frontmatter": {
 		"prefix": "eventFrontmatter",

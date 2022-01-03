@@ -1,10 +1,10 @@
 ---
-title: "Making the Most of a Mentoring Session as a Mentee"
+title: Making the Most of a Mentoring Session as a Mentee
 publishedOn: 2021-12-30T13:10:00
 updatedOn: 2021-12-30T13:10:00
-tags: ['career', 'mentoring', 'jobs']
-description: "Tips for an effective, productive mentoring session and getting the most out of your time with a mentor"
-image: "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r0msxuoiniuaepj3brnd.jpg"
+tags: [career, mentoring, jobs]
+description: Tips for an effective, productive mentoring session and getting the most out of your time with a mentor
+image: https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r0msxuoiniuaepj3brnd.jpg
 ---
 
 Mentoring is something I didn't plan on doing. It started with people reaching out to ask about my boot camp experience and how I navigated finding my first software developer job after graduating. The first few meetings, I wasn't sure what I would talk about, but showed up prepared to answer questions honestly and share my knowledge. Over time, I developed some ongoing mentor relationships with people, and found myself very invested in their success. Some have gone on to get that first job in the tech industry and seeing that happen has been so incredible!

@@ -1,8 +1,9 @@
 ---
-title: "Creating a Career Plan"
+title: Creating a Career Plan
 publishedOn: 2021-12-30T17:47:00
-tags: ["career", "jobs"]
-description: "Notes on creating a career plan, potentially a blog post or series some day"
+updatedOn: 2022-01-01T17:23:00
+tags: [career, jobs]
+description: Notes on creating a career plan, potentially a blog post or series some day
 ---
 ## Asking yourself why you want to work in tech
 
@@ -109,3 +110,20 @@ Job descriptions can be helpful here, as well as talking to people in the roles 
 ## Filling in the gaps
 
 Once you have decided which role you'd like to pursue, you'll need to determine what skills you need to develop to get hired. 
+
+## Defining what you need in a role to be successful
+
+It's true when they say that interviews are for both the candidate and the company, and that it's important to determine a fit on both sides. Take some time to define your "must-haves" and "nice-to-haves" for roles you are considering. This will also help you ask the right questions of recruiters and potential employers about the opportunity.
+
+Consider:
+
+- Remote, hybrid, or in-person work
+- Overtime expectations
+- On-call expectations
+- Employee onboarding - smaller companies may not provide formal onboarding and ask you to figure things out independently or learn as you go.
+- Collaboration/pair programming/mentor opportunities with more senior developers
+- Communication frequency you'll have with your manager
+- Metrics of success - some companies may have set metrics or criteria for evaluating performance, others may not.
+- Professional development - some companies may provide a budget or reimburse expenses for courses or educational material
+- Benefits - what do you need in terms of healthcare, retirement savings, paid time off, parental leave, etc.?
+- Compensation - what baseline compensation do you require and what is the market range for the role? 

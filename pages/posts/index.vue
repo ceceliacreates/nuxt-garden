@@ -1,16 +1,16 @@
 <template>
     <main>
-        <h1>Notes</h1>
+        <h1>Posts</h1>
         <p v-if="selectedTag" class="filter"> Filtered by: {{selectedTag}}  <button @click="selectedTag = ''">Clear</button></p>
         <p v-else class="filter"> Click any tag to filter.</p>
         <ul>
-            <li v-for="note in displayedNotes" :key="note.slug + note.createdAt"> <h2>
-                <nuxt-link :to="`/notes/${note.slug}`">{{note.title}}
+            <li v-for="post in displayedPosts" :key="post.slug + post.createdAt"> <h2>
+                <nuxt-link :to="`/posts/${post.slug}`">{{post.title}}
                 </nuxt-link>
                 </h2>
-            <p>Last updated: {{new Date(note.updatedOn).toDateString() }}</p>
-            <p class="description"> {{note.description}}</p>
-        <div class="tags"><button v-for="tag in note.tags" :key="note.slug + tag" @click="selectedTag = tag"> {{tag}}</button></div>
+            <p>Last updated: {{new Date(post.updatedOn).toDateString() }}</p>
+            <p class="description"> {{post.description}}</p>
+        <div class="tags"><button v-for="tag in post.tags" :key="post.slug + tag" @click="selectedTag = tag"> {{tag}}</button></div>
         </li>
         </ul>
     </main>
@@ -19,22 +19,22 @@
 <script>
 export default {
     async asyncData({ $content}) {
-      const notes = await $content("notes")
+      const posts = await $content("posts")
       .sortBy("updatedOn", "desc").fetch();
       
       return {
-          notes
+          posts
       }
     },
     data: () => ({
         selectedTag: ''
     }),
     computed: {
-        displayedNotes() {
+        displayedPosts() {
             if (this.selectedTag) {
-                return this.notes.filter(note => note.tags.includes(this.selectedTag))
+                return this.posts.filter(post => post.tags.includes(this.selectedTag))
             } else {
-                return this.notes
+                return this.posts
             }
         }
     }

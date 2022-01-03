@@ -1,6 +1,4 @@
 <template>
-<div id="app">
-  <Navigation />
 <main>
   <h1>Cecelia Creates
     </h1>
@@ -14,36 +12,35 @@
   </div>
   <div id="about">
     <h2>Code + content + community. </h2>
-    <p>Hi, I'm Cecelia Martinez. 👋 I'm the Developer Community Lead at <a href="https://replay.io">Replay.io</a>, Chapter Head of <a href="https://www.outintech.com">Out in Tech</a> Atlanta, a volunteer with <a href="https://www.womenwhocode.com/frontend" >Women Who Code Front End</a>, and a <a href="https://stars.github.com/">GitHub Star</a>.</p>
+    <p>Hi, I'm Cecelia Martinez 👋 Community Lead at <a href="https://replay.io">Replay.io</a>, Chapter Head of <a href="https://www.outintech.com">Out in Tech</a> Atlanta, a volunteer with <a href="https://www.womenwhocode.com/frontend" >Women Who Code Front End</a>, and a <a href="https://stars.github.com/">GitHub Star</a>.</p>
     <ul>
       <li> ➡️ Streaming Tuesdays 7:30-9 ET on <a href="https://www.twitch.tv/ceceliacreates">Twitch</a>, coding and answering questions about careers in tech.</li>
-      <li> ➡️ Offering free mentoring sessions for underrepresented people getting into tech, follow on <a href="https://twitter.com/ceceliacreates">Twitter</a> for updates</li>
+      <li> ➡️ Offering free mentoring sessions for underrepresented people getting into tech, follow on <a href="https://twitter.com/ceceliacreates">Twitter</a> for updates.</li>
     </ul>
   </div>
   <div class="content">
     <h2> Recent posts </h2>
     <ul>
-      <li v-for="article in articles" :key="article.slug + article.createdAt"> <h4>
-                <nuxt-link :to="`/articles/${article.slug}`">📄 {{article.title}}
+      <li v-for="post in posts" :key="post.slug + post.createdAt"> <h4>
+                <nuxt-link :to="`/posts/${post.slug}`">📄 {{post.title}}
                 </nuxt-link>
                 </h4>
-                <p>{{article.description}}</p>
+                <p class="description">{{post.description}}</p>
       </li>
     </ul>
-    <p><nuxt-link to="/articles">More...</nuxt-link></p>
+    <p><nuxt-link to="/posts">More...</nuxt-link></p>
     <h2> Recent notes </h2>
     <ul>
       <li v-for="note in notes" :key="note.slug + note.createdAt"> <h4>
                 <nuxt-link :to="`/notes/${note.slug}`">✍️ {{note.title}}
                 </nuxt-link>
                 </h4>
-                <p>{{note.description}}</p>
+                <p class="description">{{note.description}}</p>
       </li>
     </ul>
     <p><nuxt-link to="/notes">More...</nuxt-link></p>
     </div>
 </main>
-</div>
 </template>
 
 <script lang="ts">
@@ -52,13 +49,13 @@ import Vue from 'vue'
 export default Vue.extend({
   name: 'IndexPage',
   async asyncData({ $content}) {
-      const articles = await $content("articles")
-      .sortBy("publishedOn", "desc").limit(3).fetch();
+      const posts = await $content("posts")
+      .sortBy("updatedOn", "desc").limit(3).fetch();
 
       const notes = await $content("notes").sortBy("publishedOn", "desc").limit(3).fetch()
       
       return {
-          articles, notes
+          posts, notes
       }
     },
     head: {
@@ -77,23 +74,20 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: Helvetica, sans-serif;
-}
-
-a, a:visited {
-  color: #215F5D
-}
-
-a:hover, a:visited:hover {
-  color: #6DCCAB
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
+ background: linear-gradient(90deg, rgba(109,204,171,1) 10%, rgba(0,212,255,1) 100%);
+ background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 ul {
   list-style: none;
+  margin: 0rem;
+  padding: 0rem;
 }
 
 #avatar {
@@ -114,6 +108,10 @@ ul {
 .content {
   text-align: left;
   margin: 1rem 2rem;
+}
+
+.content > h2 {
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 600px) {

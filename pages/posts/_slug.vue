@@ -1,20 +1,20 @@
 <template>
     <main>
-         <p><nuxt-link to="/notes"> ⬅️ Back to notes </nuxt-link></p>
-        <h1> {{note.title}} </h1>
-        <p class="date">Last updated: {{new Date(note.updatedOn).toDateString() }}</p>
-        <p class="date"> First published: {{new Date(note.publishedOn).toDateString() }}</p>
-        <nuxt-content :document="note" />
+         <p><nuxt-link to="/posts"> ⬅️ Back to posts </nuxt-link></p>
+        <h1> {{post.title}} </h1>
+        <p class="date">Last updated: {{new Date(post.updatedOn).toDateString() }}</p>
+        <p class="date"> First published: {{new Date(post.publishedOn).toDateString() }}</p>
+        <nuxt-content :document="post" />
         </main>
 </template>
 
 <script>
 export default {
      async asyncData({ $content, route}) {
-         const note = await $content(`notes/${route.params.slug}`).fetch();
+         const post = await $content(`posts/${route.params.slug}`).fetch();
          
          return {
-             note
+             post
          }
     }
 }
@@ -28,12 +28,13 @@ main {
   text-align: center;
 }
 
+
 .nuxt-content {
     margin: 1rem 4rem;
     text-align: left;
 }
+
 @media only screen and (max-width: 600px) {
-  
 .nuxt-content {
   margin: 1rem;
 }

@@ -1,8 +1,9 @@
 ---
-title: "Nuxt Content"
+title: Nuxt Content
 publishedOn: 2021-12-24T00:00:00
-tags: ["vue", "nuxt", "project"]
-description: "Nuxt content rebuild project notes"
+updatedOn: 2022-01-01T17:34:00
+tags: [vue, nuxt, project]
+description: Nuxt content rebuild project notes
 ---
 
 ## Modules:
@@ -24,10 +25,12 @@ description: "Nuxt content rebuild project notes"
 - add icons
 - add navigation
 - nuxt routing
-- add images
+- add images: need to research image providers, right now just the one image on homepage
 - add style
-- Node script to read files in content directory and generate cypress fixture data for testing
-- dynamic test that loops through all content files, visits the page based on slug, and asserts the title ?
+- layouts for global style
+- layouts for dark mode toggle
+- MAYBE - Node script to read files in content directory and generate cypress fixture data for testing (???)
+- MAYBE - dynamic test that loops through all content files, visits the page based on slug, and asserts the title (???)
 
 ```js
 const fs = require('fs')
@@ -82,17 +85,17 @@ fs.readdir(contentPath, (err, files) => {
 - in-browser content editor feature
 - repeat process for other content types
 
-### Shaping Up and Shipping Out
+### Style and Ship
 - content for index page
-- adding images
 - adding icons
 - adding navigation
 - adding style
+- layouts for global style
+- scoped for local style
 - adding cypress tests
 - adding data-cy attributes
-- dynamic testing for all pages
+- dynamic testing for all pages (???)
 - what is ssg
 - nuxt build process
 - connecting to netlify
 - merging to main in github automatically deploys to netlify
-

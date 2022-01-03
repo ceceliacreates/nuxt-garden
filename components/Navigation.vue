@@ -1,7 +1,8 @@
 <template>
     <nav>
          <button class="nav"><nuxt-link to="/">Home</nuxt-link></button>
-        <button class="nav"><nuxt-link to="/articles">Articles</nuxt-link></button>
+         <button class="nav"><nuxt-link to="/events">Events</nuxt-link></button>
+        <button class="nav"><nuxt-link to="/posts">Posts</nuxt-link></button>
         <button class="nav"><nuxt-link to="/notes">Notes</nuxt-link></button>
     </nav>
 </template>
@@ -17,20 +18,16 @@ nav {
     text-align: right;
 }
 a, a:visited, a:hover, a:visited:hover {
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: bold;
 }
 
 
 button {
-    background-color: #215F5D;
-    color: white;
+    background-color: #00d4ff;
     border: none;
     border-radius: 10%;
     padding: .5rem;
-}
-button:hover {
-    background-color: #6DCCAB;
 }
 </style>

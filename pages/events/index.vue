@@ -1,16 +1,16 @@
 <template>
     <main>
-        <h1>Notes</h1>
+        <h1>Events</h1>
         <p v-if="selectedTag" class="filter"> Filtered by: {{selectedTag}}  <button @click="selectedTag = ''">Clear</button></p>
         <p v-else class="filter"> Click any tag to filter.</p>
         <ul>
-            <li v-for="note in displayedNotes" :key="note.slug + note.createdAt"> <h2>
-                <nuxt-link :to="`/notes/${note.slug}`">{{note.title}}
+            <li v-for="event in displayedEvents" :key="event.slug + event.createdAt"> <h2>
+                <nuxt-link :to="`/events/${event.slug}`">{{event.title}}
                 </nuxt-link>
                 </h2>
-            <p>Last updated: {{new Date(note.updatedOn).toDateString() }}</p>
-            <p class="description"> {{note.description}}</p>
-        <div class="tags"><button v-for="tag in note.tags" :key="note.slug + tag" @click="selectedTag = tag"> {{tag}}</button></div>
+            <p>{{event.type + ", " + new Date(event.date).toDateString() }}</p>
+            <p class="description"> {{event.description}}</p>
+        <div class="tags"><button v-for="tag in event.tags" :key="event.slug + tag" @click="selectedTag = tag"> {{tag}}</button></div>
         </li>
         </ul>
     </main>
@@ -19,22 +19,22 @@
 <script>
 export default {
     async asyncData({ $content}) {
-      const notes = await $content("notes")
-      .sortBy("updatedOn", "desc").fetch();
+      const events = await $content("events")
+      .sortBy("date", "desc").fetch();
       
       return {
-          notes
+          events
       }
     },
     data: () => ({
         selectedTag: ''
     }),
     computed: {
-        displayedNotes() {
+        displayedEvents() {
             if (this.selectedTag) {
-                return this.notes.filter(note => note.tags.includes(this.selectedTag))
+                return this.events.filter(event => event.tags.includes(this.selectedTag))
             } else {
-                return this.notes
+                return this.events
             }
         }
     }
