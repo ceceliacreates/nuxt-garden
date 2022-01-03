@@ -2,6 +2,7 @@
     <main>
          <p><nuxt-link to="/events"> ⬅️ Back to events </nuxt-link></p>
         <h1> {{event.title}} </h1>
+        <h3 v-show="event.org">{{event.org}}</h3>
         <p class="date">{{event.type + ", " + new Date(event.date).toDateString() }}</p>
         <a :href="event.link" v-show="event.link" target="blank"><p>Link to Registration</p></a>
         <div v-show="event.embed" id="video">
@@ -14,6 +15,7 @@
               allowfullscreen
             ></iframe>
             </div>
+            <a :href="event.video" v-show="event.video" target="blank"><p>Link to Video</p></a>
             <a :href="event.slides" v-show="event.slides" target="blank"><p>Link to Slides</p></a>
         <p> {{event.description}}</p>
         </main>

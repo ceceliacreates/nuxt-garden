@@ -8,6 +8,7 @@
                 <nuxt-link :to="`/events/${event.slug}`">{{event.title}}
                 </nuxt-link>
                 </h2>
+                <h4 v-show="event.org">{{event.org}}</h4>
             <p>{{event.type + ", " + new Date(event.date).toDateString() }}</p>
             <p class="description"> {{event.description}}</p>
         <div class="tags"><button v-for="tag in event.tags" :key="event.slug + tag" @click="selectedTag = tag"> {{tag}}</button></div>

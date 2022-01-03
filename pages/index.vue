@@ -29,6 +29,16 @@
       </li>
     </ul>
     <p><nuxt-link to="/posts">More...</nuxt-link></p>
+    <h2> Recent events </h2>
+    <ul>
+      <li v-for="event in events" :key="event.slug + event.createdAt"> <h4>
+                <nuxt-link :to="`/events/${event.slug}`">📄 {{event.title}}
+                </nuxt-link>
+                </h4>
+              <p class="description">{{event.type + ", " + new Date(event.date).toDateString() }}</p>
+      </li>
+    </ul>
+    <p><nuxt-link to="/events">More...</nuxt-link></p>
     <h2> Recent notes </h2>
     <ul>
       <li v-for="note in notes" :key="note.slug + note.createdAt"> <h4>
@@ -54,8 +64,10 @@ export default Vue.extend({
 
       const notes = await $content("notes").sortBy("publishedOn", "desc").limit(3).fetch()
       
+      const events = await $content("events").sortBy("date", "desc").limit(3).fetch()
+
       return {
-          posts, notes
+          posts, notes, events
       }
     },
     head: {
