@@ -2,7 +2,7 @@
 title: Test Environments
 publishedOn: 2021-12-23T00:00:00
 updatedOn: 2021-12-23T00:00:00
-tags: [testing, qa, CI, Docker, test automation, environments, topic]
+tags: ['testing', 'qa', 'CI', 'Docker', 'test automation', 'environments', 'topic']
 description: Outline to lead a guided group learning session on software test environments.
 ---
 

@@ -2,8 +2,8 @@
     <main>
          <p><nuxt-link to="/notes"> ⬅️ Back to notes </nuxt-link></p>
         <h1> {{note.title}} </h1>
-        <p class="date">Last updated: {{new Date(note.updatedOn).toDateString() }}</p>
-        <p class="date"> First published: {{new Date(note.publishedOn).toDateString() }}</p>
+        <p class="date" v-if="note.updatedOn > note.publishedOn">Last updated: {{new Date(note.updatedOn).toDateString() }}</p>
+        <p class="date"> First created: {{new Date(note.publishedOn).toDateString() }}</p>
         <nuxt-content :document="note" />
         </main>
 </template>

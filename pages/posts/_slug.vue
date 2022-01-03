@@ -2,7 +2,7 @@
     <main>
          <p><nuxt-link to="/posts"> ⬅️ Back to posts </nuxt-link></p>
         <h1> {{post.title}} </h1>
-        <p class="date">Last updated: {{new Date(post.updatedOn).toDateString() }}</p>
+        <p class="date" v-if="post.updatedOn > post.publishedOn">Last updated: {{new Date(post.updatedOn).toDateString() }}</p>
         <p class="date"> First published: {{new Date(post.publishedOn).toDateString() }}</p>
         <nuxt-content :document="post" />
         </main>

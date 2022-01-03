@@ -32,7 +32,7 @@
     <h2> Recent events </h2>
     <ul>
       <li v-for="event in events" :key="event.slug + event.createdAt"> <h4>
-                <nuxt-link :to="`/events/${event.slug}`">📄 {{event.title}}
+                <nuxt-link :to="`/events/${event.slug}`">🎥 {{event.title}}
                 </nuxt-link>
                 </h4>
               <p class="description">{{event.type + ", " + new Date(event.date).toDateString() }}</p>

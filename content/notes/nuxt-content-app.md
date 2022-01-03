@@ -2,7 +2,7 @@
 title: Nuxt Content
 publishedOn: 2021-12-24T00:00:00
 updatedOn: 2022-01-01T17:34:00
-tags: [vue, nuxt, project]
+tags: ['vue', 'nuxt', 'project']
 description: Nuxt content rebuild project notes
 ---
 
