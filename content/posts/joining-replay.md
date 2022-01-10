@@ -2,7 +2,7 @@
 title: Joining Replay.io
 publishedOn: 2022-01-03T12:56:00
 updatedOn: 2022-01-03T12:56:00
-tags: ['community']
+tags: [community]
 description: Why I joined Replay.io as Community Lead
 image: 
 ---
