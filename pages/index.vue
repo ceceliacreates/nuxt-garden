@@ -14,22 +14,13 @@
     <h2>Code + content + community. </h2>
     <p>Hi, I'm Cecelia Martinez 👋 Community Lead at <a href="https://replay.io">Replay.io</a>, Chapter Head of <a href="https://www.outintech.com">Out in Tech</a> Atlanta, a volunteer with <a href="https://www.womenwhocode.com/frontend" >Women Who Code Front End</a>, and a <a href="https://stars.github.com/">GitHub Star</a>.</p>
     <ul>
-      <li> ➡️ Streaming Tuesdays 7:30-9 ET on <a href="https://www.twitch.tv/ceceliacreates">Twitch</a>, coding and answering questions about careers in tech.</li>
-      <li> ➡️ Offering free mentoring sessions for underrepresented people getting into tech, follow on <a href="https://twitter.com/ceceliacreates">Twitter</a> for updates.</li>
+      <li> ➡️ Blogging on <a href="https://dev.to/ceceliacreates" target="blank">Dev.to</a> and <a href="https://ceceliacreates.hashnode.dev/" target="blank">Hashnode</a></li>
+      <li> ➡️ Streaming Tuesdays 7:30-9 ET on <a href="https://www.twitch.tv/ceceliacreates" target="blank">Twitch</a></li>
+      <li> ➡️ Free mentoring sessions posted monthly on <a href="https://twitter.com/ceceliacreates" target="blank">Twitter</a></li>
     </ul>
   </div>
   <div class="content">
-    <h2> Recent posts </h2>
-    <ul>
-      <li v-for="post in posts" :key="post.slug + post.createdAt"> <h4>
-                <nuxt-link :to="`/posts/${post.slug}`">📄 {{post.title}}
-                </nuxt-link>
-                </h4>
-                <p class="description">{{post.description}}</p>
-      </li>
-    </ul>
-    <p><nuxt-link to="/posts">More...</nuxt-link></p>
-    <h2> Recent events </h2>
+    <h2> Upcoming events </h2>
     <ul>
       <li v-for="event in events" :key="event.slug + event.createdAt"> <h4>
                 <nuxt-link :to="`/events/${event.slug}`">🎥 {{event.title}}
@@ -38,7 +29,7 @@
               <p class="description">{{event.type + ", " + new Date(event.date).toDateString() }}</p>
       </li>
     </ul>
-    <p><nuxt-link to="/events">More...</nuxt-link></p>
+    <p><nuxt-link to="/events">Past events...</nuxt-link></p>
     <h2> Recent notes </h2>
     <ul>
       <li v-for="note in notes" :key="note.slug + note.createdAt"> <h4>
@@ -59,15 +50,13 @@ import Vue from 'vue'
 export default Vue.extend({
   name: 'IndexPage',
   async asyncData({ $content}) {
-      const posts = await $content("posts")
-      .sortBy("updatedOn", "desc").limit(3).fetch();
 
       const notes = await $content("notes").sortBy("publishedOn", "desc").limit(3).fetch()
       
-      const events = await $content("events").sortBy("date", "desc").limit(3).fetch()
+      const events = await $content("events").where({date: {$gt: new Date()}}).sortBy("date", "desc").limit(3).fetch()
 
       return {
-          posts, notes, events
+         notes, events
       }
     },
     head: {

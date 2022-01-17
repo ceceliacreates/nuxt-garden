@@ -2,7 +2,6 @@
     <nav>
          <button class="nav"><nuxt-link to="/">Home</nuxt-link></button>
          <button class="nav"><nuxt-link to="/events">Events</nuxt-link></button>
-        <button class="nav"><nuxt-link to="/posts">Posts</nuxt-link></button>
         <button class="nav"><nuxt-link to="/notes">Notes</nuxt-link></button>
     </nav>
 </template>

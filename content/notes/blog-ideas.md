@@ -2,7 +2,7 @@
 title: Blog ideas
 publishedOn: 2022-01-01T14:29:00
 updatedOn: 2022-01-01T14:29:00
-tags: ['writing']
+tags: [writing]
 description: an ongoing list of ideas for blog posts
 ---
 

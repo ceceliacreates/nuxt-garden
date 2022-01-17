@@ -2,7 +2,7 @@
 title: Software Testing Lifecycle
 publishedOn: 2021-12-22T00:00:00
 updatedOn: 2021-12-22T00:00:00
-tags: ['testing', 'qa', 'agile', 'develoment', 'topic' ]
+tags: [testing, qa, agile, develoment, topic ]
 description: Outline to lead a guided group learning session on the software testing lifecycle.
 ---
 

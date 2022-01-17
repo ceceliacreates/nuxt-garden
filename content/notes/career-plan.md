@@ -2,8 +2,8 @@
 title: Creating a Career Plan
 publishedOn: 2021-12-30T17:47:00
 updatedOn: 2022-01-01T17:23:00
-tags: ['career', 'jobs']
-description: Notes on creating a career plan, potentially a blog post or series some day
+tags: [career, jobs]
+description: notes on creating a career plan, potentially a blog post or series some day
 ---
 ## Asking yourself why you want to work in tech
 
