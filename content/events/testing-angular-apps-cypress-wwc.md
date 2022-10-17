@@ -8,5 +8,5 @@ link:
 embed: s5MBaUFp_uo
 video: 
 slides: https://slides.com/ceceliamartinez/testing-angular-cypress-wwc
-tags: ['testing', 'cypress', 'meetup', 'wwc', 'angular', 'frontend']
+tags: ['testing', 'cypress', 'angular']
 ---

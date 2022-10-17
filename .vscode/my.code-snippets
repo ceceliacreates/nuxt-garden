@@ -73,6 +73,7 @@
 		  "video: $8",
 		  "slides: $9",
 		  "tags: [$10]",
+		  "org: $11",
 		  "---"
 		],
 		"description": "Event frontmatter"

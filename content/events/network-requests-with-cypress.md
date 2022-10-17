@@ -8,5 +8,5 @@ link:
 video: https://portal.gitnation.org/contents/network-requests-with-cypress
 embed: 
 slides: https://slides.com/ceceliamartinez/network-requests-with-cypress
-tags: ['testing', 'cypress', 'conference']
+tags: ['testing', 'cypress']
 ---
