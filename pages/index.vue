@@ -6,17 +6,16 @@
   <nuxt-img src="/avatar.png" sizes="sm:80vw md:50vw lg:300px" id="avatar" />
   </div>
   <div id="icons">
-  <a href="https://twitter.com/ceceliacreates"><font-awesome-icon :icon="['fab', 'twitter-square']" /></a>
-  <a href="https://www.twitch.tv/ceceliacreates"><font-awesome-icon :icon="['fab', 'twitch']" /></a>
-  <a href="https://github.com/ceceliacreates"><font-awesome-icon :icon="['fab', 'github-square']" /></a>
+  <a href="https://twitter.com/ceceliacreates" target="blank"><font-awesome-icon :icon="['fab', 'twitter-square']" /></a>
+  <a href="https://www.twitch.tv/ceceliacreates" target="blank"><font-awesome-icon :icon="['fab', 'twitch']" /></a>
+  <a href="https://github.com/ceceliacreates" target="blank"><font-awesome-icon :icon="['fab', 'github-square']" /></a>
   </div>
   <div id="about">
     <h2>Code + content + community. </h2>
-    <p>Hi, I'm Cecelia Martinez 👋 Community Lead at <a href="https://replay.io">Replay.io</a>, Chapter Head of <a href="https://www.outintech.com">Out in Tech</a> Atlanta, a volunteer with <a href="https://www.womenwhocode.com/frontend" >Women Who Code Front End</a>, and a <a href="https://stars.github.com/">GitHub Star</a>.</p>
+    <p>Hi, I'm Cecelia Martinez 👋 Developer Advocate for <a href="https://ionic.io/appflow" target="blank">Appflow by Ionic</a>, Chapter Head of <a href="https://www.outintech.com" target="blank">Out in Tech</a> Atlanta, a volunteer with <a href="https://www.womenwhocode.com/frontend" target="blank" >Women Who Code Front End</a>, and a <a href="https://stars.github.com/" target="blank">GitHub Star</a>.</p>
     <ul>
-      <li> ➡️ Blogging on <a href="https://dev.to/ceceliacreates" target="blank">Dev.to</a> and <a href="https://ceceliacreates.hashnode.dev/" target="blank">Hashnode</a></li>
-      <li> ➡️ Streaming Tuesdays 7:30-9 ET on <a href="https://www.twitch.tv/ceceliacreates" target="blank">Twitch</a></li>
-      <li> ➡️ Free mentoring sessions posted monthly on <a href="https://twitter.com/ceceliacreates" target="blank">Twitter</a></li>
+      <li> ➡️ Blogging on <a href="https://dev.to/ceceliacreates" target="blank">Dev.to</a>.</li>
+
     </ul>
   </div>
   <div class="content">
@@ -30,16 +29,6 @@
       </li>
     </ul>
     <p><nuxt-link to="/events">Past events...</nuxt-link></p>
-    <h2> Recent notes </h2>
-    <ul>
-      <li v-for="note in notes" :key="note.slug + note.createdAt"> <h4>
-                <nuxt-link :to="`/notes/${note.slug}`">✍️ {{note.title}}
-                </nuxt-link>
-                </h4>
-                <p class="description">{{note.description}}</p>
-      </li>
-    </ul>
-    <p><nuxt-link to="/notes">More...</nuxt-link></p>
     </div>
 </main>
 </template>
@@ -50,13 +39,11 @@ import Vue from 'vue'
 export default Vue.extend({
   name: 'IndexPage',
   async asyncData({ $content}) {
-
-      const notes = await $content("notes").sortBy("publishedOn", "desc").limit(3).fetch()
       
       const events = await $content("events").where({date: {$gt: new Date()}}).sortBy("date", "desc").limit(3).fetch()
 
       return {
-         notes, events
+       events
       }
     },
     head: {
