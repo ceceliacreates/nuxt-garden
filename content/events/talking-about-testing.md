@@ -8,4 +8,5 @@ link:
 embed: hXfTsdEXn0c
 video:
 slides:
+tags: ['cypress', 'testing']
 ---

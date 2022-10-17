@@ -7,5 +7,5 @@ description: Unit, component, integration, end-to-end-- there are many types of 
 link:
 embed: -MUqhmhjt1I
 slides: https://slides.com/ceceliamartinez/effective-testing-approaches
-tags: [testing, conference, test strategy]
+tags: ['testing']
 ---

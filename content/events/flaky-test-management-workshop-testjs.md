@@ -8,5 +8,5 @@ link:
 embed: 
 video: https://portal.gitnation.org/contents/flaky-test-management-with-cypress
 slides: https://slides.com/ceceliamartinez/flaky-test-management-workshop-testjs-summit
-tags: ['testing', 'cypress', 'conference', 'flake']
+tags: ['testing', 'cypress', 'flake']
 ---

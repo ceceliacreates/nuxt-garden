@@ -7,5 +7,5 @@ description: If you've used GitHub for learning and personal projects, you're pr
 link:
 embed:
 slides: https://slides.com/ceceliamartinez/stepping-up-your-github-game
-tags: [github, wwc, meetup, OSS]
+tags: ['github', 'OSS']
 ---
